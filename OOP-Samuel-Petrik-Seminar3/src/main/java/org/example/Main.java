@@ -1,8 +1,10 @@
 package org.example;
 
+import org.example.auto.Auto;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        System.out.println("Ahoj svet!");
+        Auto volvo = new Auto();    //new vytvarame nove objekty,...
+
     }
 }
