@@ -1,7 +1,7 @@
 package org.example;
 
 public class Auto {
-    public static final int PALIVO_NA_KM = 0.5; //static na konstanty
+    public static final double PALIVO_NA_KM = 0.5; //static na konstanty
     private double stavNadrze;
     private double kapacitaNadrze;
     private boolean ojazdene;
