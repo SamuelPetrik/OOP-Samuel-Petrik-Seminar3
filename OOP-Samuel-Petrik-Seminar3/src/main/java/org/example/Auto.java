@@ -1,50 +1,17 @@
 package org.example;
 
-public class Auto {
-    public static final double PALIVO_NA_KM = 0.5; //static na konstanty
-    private double stavNadrze;
-    private double kapacitaNadrze;
-    private boolean ojazdene;
+import java.util.Random;
+import java.util.Scanner;
+public class Auto extends Vozidlo{
+    protected String nazovModelu;
 
-    public Auto() {
-        this(50,100);
-    }
-
-    public Auto(double stavNadrze, double kapacitaNadrze){
-        this.stavNadrze = stavNadrze;
-        this.kapacitaNadrze = kapacitaNadrze;
-        this.ojazdene = true;
+    public Auto(String znacka, int pocetKolies, String nazovModelu) {
+        super(znacka, pocetKolies); //zavolam super - vola konstruktor rodicoskej triedy
     }
 
-    public void jazdi(double vzdialenostVKm){
-        stavNadrze = stavNadrze - vzdialenostVKm * PALIVO_NA_KM;
-        if(stavNadrze < 0) {
-            stavNadrze = 0;
-            System.out.println("Mame prazdnu nadrz");
-        }
-    }
-    //getter
-    public double getStavNadrze(){
-        return stavNadrze;
-    }
-    //setter
-    public void setStavNadrze(double stavNadrze){
-        this.stavNadrze = stavNadrze;   //this odkazuje sam na seba
-    }
-
-    public double getKapacitaNadrze() {
-        return kapacitaNadrze;
-    }
-
-    public void setKapacitaNadrze(double kapacitaNadrze) {
-        this.kapacitaNadrze = kapacitaNadrze;
-    }
-
-    public boolean isOjazdene() {
-        return ojazdene;
-    }
-
-    public void setOjazdene(boolean ojazdene) {
-        this.ojazdene = ojazdene;
+    @Override
+    public void truba() {
+        System.out.println("TUtutututu");
     }
 }
+
